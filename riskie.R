@@ -62,6 +62,7 @@ setwd('/Users/georgleistenschneider/Desktop/')
 #round 2 (d.R2): 3,2,1
 #round 3 (d.R3): 2,1,3
 
+#There are example structures on github as well, there is not data in them becaus of privacy tho
 #read in csv data
 d.R1 <- read.csv("RdataR1x.csv", header = TRUE, sep = ";") 
 d.R2 <- read.csv("RdataR2x.csv", header = TRUE, sep = ";")
