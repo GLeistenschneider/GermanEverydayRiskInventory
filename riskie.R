@@ -1,9 +1,8 @@
 #Georg Leistenschneider
 #R Script for the ANALYSIS of the German Everyday Risk Inventory (GERI)
 #Analysis Rating Survey V1.0 (07/2020)
-#WARNING: Since I am not that confident with R, some things may seem confusing or 
-#even disturbing to you... therefore please do not judge. 
-#Buckle your seatbelt and enjoy the ride...
+#WARNING: Since I am not that confident with R, some things may seem confusing
+#as long as you stick to the comments everything should work just fine...
 
 
 #If you have any questions or want to receive the data for research 
@@ -203,6 +202,7 @@ df <- d.sit %>%
   select(1 | matches('story') | matches('risk') | matches ('fame') | matches ('option_a') | matches ('option_b') | 
            matches ('observation'))
 
+##2.3 Realibility Analysis
 #THE ONE AND ONLY FUNCTION
 #check for kripp alpha over risk_a, risk_b, risk_oa (49 Sits),
 #make all high risks opt_a, calculate kripp.alpha, ...
@@ -263,8 +263,8 @@ fwrite(good_sits, file ="/Users/georgleistenschneider/Desktop/GERI.csv", sep = "
 
 
 
-# ##2.3 Rateranalysis
-# ##2.3.1 RATERANALYSIS 1
+# ##2.4 Rateranalysis
+# ##2.4.1 RATERANALYSIS 1
 # ##IMPORTANT: BEFORE uncommenting and analysing raterdata remove length(unique()) infront of observations
 # ##add risk_OA4gender = test$risk_oa) at the end of THE ONE AND ONLY FUNCTION 
 # 
@@ -319,7 +319,7 @@ fwrite(good_sits, file ="/Users/georgleistenschneider/Desktop/GERI.csv", sep = "
 # 
 # 
 # 
-# ##2.3.2 RATERANALYSIS 2
+# ##2.4.2 RATERANALYSIS 2
 # #whom of the observationers made it into the GERI
 # xxx <- analyze %>%
 # filter(risk_oa_4rlz > .667 & length(observations) > 4)
@@ -352,7 +352,7 @@ fwrite(good_sits, file ="/Users/georgleistenschneider/Desktop/GERI.csv", sep = "
 # 
 # 
 
-##2.3.3 Personality (BFI-10)
+##2.4.3 Personality (BFI-10)
 
 #reverse ratings for bfi10_e1, bfi10_v1, bfi10_g1, bfi10_n1, bfi10_o1 (according to BFI-10 scoring manual)
 rev <- c("bfi10_e1", "bfi10_v1", "bfi10_g1", "bfi10_n1", "bfi10_o1")
